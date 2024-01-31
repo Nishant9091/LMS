@@ -34,7 +34,7 @@
               align-items: center;
               justify-content: flex-start;">
                 <div class="col-md-3">
-                  <select name="Agent_details" id="agentlist" class="agent_details">
+                  <select name="Agent_details" id="agentlist" class="agent_details1">
                     <option value="">Search by Agent name</option>
                     <option value="ritesh1">Ritesh1</option>
                     <option value="ritesh2">Ritesh2</option>
@@ -43,19 +43,19 @@
                 <div class="col-md-3">
                   <div class="fromDate" style="display: flex;align-items: center;justify-content: space-evenly;">
                     <label for="from">From:</label>
-                    <input type="date" placeholder="select date" class="agent_details">
+                    <input type="date" placeholder="select date" class="agent_details1">
                   </div>
 
                 </div>
                 <div class="col-md-3">
                   <div class="ToDate" style="display: flex;align-items: center;justify-content: space-evenly;">
                     <label for="from">To:</label>
-                    <input type="date" placeholder="select date" class="agent_details">
+                    <input type="date" placeholder="select date" class="agent_details1">
                   </div>
                 </div>
 
                 <div class="col-md-3">
-                  <div class="leadId agent_details mx-2 " style="background: white;    
+                  <div class="leadId agent_details1 mx-2 " style="background: white;    
                 ">
 
                     <span>Lead Id </span>
@@ -66,7 +66,9 @@
               <div class="col-md-2">
                 <div class="addPackage  text-end">
                   <button class="button-30" role="button" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">+ <span>Add Lead</span></button>
+                    data-bs-target="#exampleModal" style="font-size: 15px;
+                    font-weight: 500;
+                    border: 1px solid grey;">+ <span>Add Lead</span></button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true" data-bs-backdrop="false" style="    backdrop-filter: blur(2px);
                     ">
@@ -80,8 +82,8 @@
                   align-items: center;
                
                 ">
-                            <div style="width: 90%">
-                              <form class="row" action=""
+                            <div style="width: 90%" id="faram">
+                              <form class="row text-start" action=""
                                 style="background-color: white;   background-color: white;
                       
                       border-radius: 15px;
@@ -195,7 +197,7 @@
                                   </div>
 
 
-                                  <div class="input-group mt-4">
+                                  <div class="input-group my-4">
                                     <span class="input-group-text">COMMENTS</span>
                                     <textarea class="form-control" aria-label="With textarea"></textarea>
                                   </div>
@@ -230,7 +232,7 @@
                                       <input type="email" class="form-control" id="inputEmail4">
                                     </div>
                                     <div class="col-md-6">
-                                      <label for="destination" class="my-2">GENDER</label>
+                                      <label for="destination" class="my-3">GENDER</label>
                                       <select class="form-select" aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">MALE</option>
@@ -697,11 +699,11 @@
                           </div>
 
                           <div class="update_status">
-                            <button class="updatebtn">Update Status</button>
+                            <button class="updatebtn">Renew Leads</button>
                           </div>
 
                           <div class="update_status">
-                            <button class="updatebtn">Update Status</button>
+                            <button class="updatebtn">Allocate lead</button>
                           </div>
                         </div>
 

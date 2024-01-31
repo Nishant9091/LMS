@@ -383,6 +383,16 @@ body.dark .search-bar input {
   top: 39px;
   left: 151px;
 }
+.agent_details1{
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 300;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .agent_details {
   /* width: 85%; */
   border-radius: 10px;
@@ -1121,3 +1131,9 @@ canvas{
     gap: 10px;
 }
 
+#faram form label{
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0e0e0e;
+}
