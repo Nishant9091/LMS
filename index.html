@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>LMS</title>
+  <script defer src="activepage.js"></script>
+  <link rel="stylesheet" href="css/Package.css">
+
+  <script src="js/custom.js"></script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="contianer-fluid">
+    <div class="row">
+      <footer></footer>
+
+
+      <div class="col-md-10 mainconttent ">
+        <header></header>
+
+        <main class="" style="margin-top: 80px;">
+          <div class="container-fluid m-0 p-0">
+
+            <!-- filterbox -->
+            <div class="row mt-2">
+              <div class="col-md-10 " style="display: flex;
+              align-items: center;
+              justify-content: flex-start;">
+                <div class="col-md-3">
+                  <select name="Agent_details" id="agentlist" class="agent_details">
+                    <option value="">Search by Agent name</option>
+                    <option value="ritesh1">Ritesh1</option>
+                    <option value="ritesh2">Ritesh2</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <div class="fromDate" style="display: flex;align-items: center;justify-content: space-evenly;">
+                    <label for="from">From:</label>
+                    <input type="date" placeholder="select date" class="agent_details">
+                  </div>
+
+                </div>
+                <div class="col-md-3">
+                  <div class="ToDate" style="display: flex;align-items: center;justify-content: space-evenly;">
+                    <label for="from">To:</label>
+                    <input type="date" placeholder="select date" class="agent_details">
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="leadId agent_details mx-2 " style="background: white;    
+                ">
+
+                    <span>Lead Id </span>
+                    <i class='bx bx-search'></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="addPackage  text-end">
+                  <button class="button-30" role="button" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">+ <span>Add Lead</span></button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true" data-bs-backdrop="false" style="    backdrop-filter: blur(2px);
+                    ">
+                    <div class="modal-dialog" style="    max-width: 90rem;">
+                      <div class="modal-content" style="background: transparent; border: none;">
+                        <div class="modal-body">
+
+                          <div style="
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+               
+                ">
+                            <div style="width: 90%">
+                              <form class="row" action=""
+                                style="background-color: white;   background-color: white;
+                      
+                      border-radius: 15px;
+                      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                                <div style="display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 0px 10px;
+                                    background: #21252a;
+                                    color: white;
+                                    margin-bottom: 15px;
+                                    border-radius: 10px 10px 0 0;">
+                                  <span style=" font-size: 20px;
+                                    padding-left: 20px;">Add leads </span>
+                                  <i class="bx bx-x p-3" data-bs-dismiss="modal"
+                                    style="font-size: 27px;cursor: pointer;"> </i>
+                                </div>
+                                <div class="col-md-6">
+
+                                  <h5 class="my-3">ADD DETAILS:</h5>
+                                  <div class="row">
+                                    <div class="col">
+                                      <label for="destination">DESTINATION</label>
+                                      <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                    <div class="col">
+                                      <label for="lead type">LEAD TYPE</label>
+                                      <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col">
+                                      <label for="from city">FROM CITY</label>
+                                      <input type="text" class="form-control" placeholder="" aria-label="from city" />
+                                    </div>
+                                    <div class="col">
+                                      <label for="no.of days">NO. OF DAYS</label>
+                                      <input type="text" class="form-control" placeholder="" aria-label="no.of days" />
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col">
+                                      <label for="travel date">TRAVEL DATE</label>
+                                      <input type="date" class="form-control" placeholder="" aria-label="travel date" />
+                                    </div>
+                                    <div class="col">
+                                      <label for="no. of">NO. OF</label>
+                                      <input type="text" class="form-control" placeholder="" aria-label="no. of" />
+                                    </div>
+                                  </div>
+
+                                  <div class="row ">
+                                    <div class="col">
+                                      <label for="no. of children">NO. OF CHILDREN</label>
+                                      <input type="text" class="form-control" placeholder=""
+                                        aria-label="no. of children" />
+                                    </div>
+                                    <div class="col">
+                                      <label for="no. of">NO. OF</label>
+                                      <input type="text" class="form-control" placeholder="" aria-label="no. of" />
+                                    </div>
+                                  </div>
+
+                                  <div class="row ">
+                                    <div class="col">
+                                      <label for="budget (full package)">BUDGET (FULL PACKAGE)</label>
+                                      <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                    <div class="col">
+                                      <label for="hotel">HOTEL</label>
+                                      <input type="text" class="form-control" placeholder="" aria-label="hotel" />
+                                    </div>
+                                  </div>
+
+                                  <div class="row ">
+                                    <div class="col">
+                                      <label for="lead source">LEAD SOURCE</label>
+                                      <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                    <div class="col">
+                                      <label for="shared type">SHARED TYPE</label>
+                                      <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="input-group mt-4">
+                                    <span class="input-group-text">COMMENTS</span>
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="d-flex justify-content-between">
+                                    <div>
+                                      <h5 class="my-3">CONTACT DETAILS: </h5>
+                                    </div>
+                                    <!-- <i class='bx bx-x'></i> -->
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6 my-2">
+                                      <label for="inputEmail4" class="form-label">NAME</label>
+                                      <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="col-md-6 my-2">
+                                      <label for="inputPassword4" class="form-label">DOB</label>
+                                      <input type="date" class="form-control" id="date">
+                                    </div>
+                                    <div class="col-md-6 my-2">
+                                      <label for="mob" class="form-label">MOBILE NO.</label>
+                                      <input type="text" class="form-control" id="mob">
+                                    </div>
+                                    <div class="col-md-6 my-2">
+                                      <label for="altmob" class="form-label">ALTERNATE MOBILE NO.</label>
+                                      <input type="text" class="form-control" id="altmob">
+                                    </div>
+                                    <div class="col-md-6 my-2">
+                                      <label for="inputEmail4" class="form-label">Email</label>
+                                      <input type="email" class="form-control" id="inputEmail4">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="destination" class="my-2">GENDER</label>
+                                      <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">MALE</option>
+                                        <option value="2">FEMALE</option>
+                                        <option value="3">OTHER</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div>
+                                      <button class="btn-primary rounded p-2">SUBMIT</button>
+                                    </div>
+                                  </div>
+
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- filterbox -->
+
+            <div class="row mt-3 m-0 p-0  justify-content-between">
+
+              <div class="col-md-2 mx-3">
+                <div class="e-card playing">
+                  <div class="image"></div>
+
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+
+
+                  <div class="infotop">
+                    Total Lead
+                    <br>
+                    <div class="name">20</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 mx-3">
+
+                <div class="e-card1 playing1">
+                  <div class="image1"></div>
+
+                  <div class="wave1"></div>
+                  <div class="wave1"></div>
+                  <div class="wave1"></div>
+
+
+                  <div class="infotop1">Hot Lead
+                    <br>
+                    <div class="name1">20</div>
+                  </div>
+                </div>
+
+                <!-- <div class="card1" style="position: relative;;">
+                  <img src="assets/card design/square 1.svg" alt="" class="cardBackground"> -->
+                <!-- style=" border-top: 3px solid #954187;" -->
+                <!-- <h2 style="color: #954187;">Total Leads</h2>
+                  <div class="number" style="">
+                    <span>19</span>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col-md-2 mx-3">
+
+                <div class="e-card2 playing2">
+                  <div class="image2"></div>
+
+                  <div class="wave2"></div>
+                  <div class="wave2"></div>
+                  <div class="wave2"></div>
+
+
+                  <div class="infotop2">Warm Leads
+                    <br>
+                    <div class="name2">20</div>
+                  </div>
+                </div>
+
+                <!-- <div class="card1" style="position: relative;;"> -->
+                <!-- <img src="assets/card design/square 2.svg" alt="" class="cardBackground"> -->
+                <!-- style="border-top: 3px solid #fb2b2b;;" -->
+                <!-- <h2 style="color: #fe2a2a">Hot Leads</h2>
+                  <div class="number">
+                    <span>19</span>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col-md-2 mx-3">
+
+                <div class="e-card3 playing3">
+                  <div class="image3"></div>
+
+                  <div class="wave3"></div>
+                  <div class="wave3"></div>
+                  <div class="wave3"></div>
+
+
+                  <div class="infotop3">Cold Lead
+                    <br>
+                    <div class="name3">20</div>
+                  </div>
+                </div>
+
+                <!-- <div class="card1" style="position: relative;;">
+                  <img src="assets/card design/square 3.svg" alt="" class="cardBackground"> -->
+                <!-- style="border-top: 3px solid #42954b;;" -->
+                <!-- <h2 style="color:  #288631">Warm Leads</h2>
+                  <div class="number">
+                    <span>19</span>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col-md-2 mx-3">
+
+                <div class="e-card4 playing4">
+                  <div class="image4"></div>
+
+                  <div class="wave4"></div>
+                  <div class="wave4"></div>
+                  <div class="wave4"></div>
+
+
+                  <div class="infotop4">Total Follow-up
+                    <br>
+                    <div class="name4">20</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- graph chart -->
+
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="my-4 rounded" style="background: white;     height: 27.7rem;">
+                    <div style="display: flex;
+                    align-items: center;
+                    /* margin-left: 10px; */
+                    font-size: 25px;
+                    padding: 5px;
+                    border-bottom: 1px solid grey;">
+
+                      <span style="color: #0b6761;"><i class='bx bxs-bar-chart-alt-2'></i></span>
+                      <span style="width: 100%;
+                    display: inline-flex;
+                   
+                    font-size: 20px;
+                    font-weight: 500;
+                 
+                    padding: 10px;
+                    color: #45827e;
+                    ">Agent wise progrees</span>
+                    </div>
+                    <canvas id="myChart4" width="700" height="440" class="rounded">
+
+                    </canvas>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="my-4 rounded" style="width: 625px !important;background: white;
+  height: 442px !important;
+  margin: auto;">
+                    <div style="display: flex;
+   align-items: center;
+   /* margin-left: 10px; */
+   font-size: 25px;
+   padding: 5px;
+   border-bottom: 1px solid grey;">
+                      <span style="color: #0b6761;"><i class='bx bxs-doughnut-chart'></i></span>
+                      <span style="width: 100%;
+                    display: inline-flex;
+                   
+                    font-size: 20px;
+                    font-weight: 500;
+                 
+                    padding: 10px;
+                    color: #45827e;
+                   ">Source wise Lead </span>
+                    </div>
+
+                    <canvas id="myChart" class="rounded"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- graph chart -->
+
+              <!-- checkbox leads -->
+              <div class="checkboxcontianer my-1"
+                style="display: flex;align-items: center;justify-content: end;color: white;">
+                <div class="activeboxcheck1">
+                  <label for="checkbox1">Active Leads</label>
+                  <input type="checkbox" class="checkbox1" id="checkbox1">
+                </div>
+
+                <div class="closedboxcheck1">
+                  <label for="checkbox2">Closed Leads</label>
+                  <input type="checkbox" class="checkbox2" id="checkbox2">
+                </div>
+              </div>
+              <!-- checkbox leads -->
+
+
+              <!-- lead summary -->
+              <div class="accordion activeLeads my-2" id="accordionExample">
+                <div class="accordion-item" style="border-left: 5px solid #80bcf1;">
+
+                  <h2 class="accordion-header" id="headingOne">
+                    <div>
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span style="font-weight: 600;">Active Leads</span>
+                        &nbsp &nbsp
+                        <span style="color: black;"> 3 Leads</span>
+                      </button>
+                    </div>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body" style="padding: 7px;overflow-x: auto;">
+
+                      <div class="d-flex align-items-center">
+                        <table class="table rounded">
+                          <thead>
+                            <tr class="table-head fs-bold text-light">
+                              <td>S.No</td>
+                              <td>Lead Summary</td>
+                              <td>Name</td>
+                              <td>Lead Status</td>
+                              <td>Source</td>
+                              <td>Budget</td>
+                              <td>Lead Type</td>
+                              <td>Updated Date</td>
+                              <td>Follow up Date</td>
+                              <td>lead Owner</td>
+                              <td>Disposition</td>
+                              <td>Last Comment</td>
+                              <td>Action</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="cards">
+                              <td>
+                                <div style="flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 10px;">
+                                  <div class="sno" style="font-size: 15px;
+                                        font-weight: 700;">1</div>
+                                  <div class="checkboxsno">
+                                    <input type="checkbox" style=" width: 20px !important;
+                                            height: 20px !important;" />
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div>12 july 2023<br>Kedarnath</div>
+                              </td>
+                              <td>
+                                <div>vaishanvi</div>
+                              </td>
+                              <td>
+                                <div>
+                                  itineary Shared
+                                </div>
+                              </td>
+                              <td>
+                                <div>Hellotravel</div>
+                              </td>
+                              <td>
+                                <div>10,000/</div>
+                              </td>
+                              <td>
+                                <div>Hot</div>
+                              </td>
+                              <td>
+                                <div style="color: green;">
+                                  21-12-2024
+                                </div>
+                              </td>
+                              <td>
+                                <div>12-12-2024</div>
+                              </td>
+                              <td>
+                                <div>Raj</div>
+                              </td>
+                              <td>
+                                <div>Itineary shared</div>
+                              </td>
+                              <td>
+                                <div>Itineary shared</div>
+                              </td>
+                              <td>
+                                <div><i class='bx bx-edit'></i></div>
+                              </td>
+
+                            </tr>
+
+
+
+
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="d-flex align-items-center">
+                        <table class="table rounded">
+                          <thead>
+                            <tr class="table-head fs-bold text-light">
+                              <td>S.No</td>
+                              <td>Lead Summary</td>
+                              <td>Name</td>
+                              <td>Lead Status</td>
+                              <td>Source</td>
+                              <td>Budget</td>
+                              <td>Lead Type</td>
+                              <td>Updated Date</td>
+                              <td>Follow up Date</td>
+                              <td>lead Owner</td>
+                              <td>Disposition</td>
+                              <td>Last Comment</td>
+                              <td>Action</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="cards">
+                              <td>
+                                <div style="flex-direction: column;
+                                      justify-content: center;
+                                      align-items: center;
+                                      gap: 10px;">
+                                  <div class="sno" style="font-size: 15px;
+                                      font-weight: 700;">1</div>
+                                  <div class="checkboxsno">
+                                    <input type="checkbox" style=" width: 20px !important;
+                                          height: 20px !important;" />
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div>12 july 2023<br>Kedarnath</div>
+                              </td>
+                              <td>
+                                <div>vaishanvi</div>
+                              </td>
+                              <td>
+                                <div>
+                                  itineary Shared
+                                </div>
+                              </td>
+                              <td>
+                                <div>Hellotravel</div>
+                              </td>
+                              <td>
+                                <div>10,000/</div>
+                              </td>
+                              <td>
+                                <div>Hot</div>
+                              </td>
+                              <td>
+                                <div style="color: green;">
+                                  21-12-2024
+                                </div>
+                              </td>
+                              <td>
+                                <div>12-12-2024</div>
+                              </td>
+                              <td>
+                                <div>Raj</div>
+                              </td>
+                              <td>
+                                <div>Itineary shared</div>
+                              </td>
+                              <td>
+                                <div>Itineary shared</div>
+                              </td>
+                              <td>
+                                <div><i class='bx bx-edit'></i></div>
+                              </td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+
+                      </div>
+
+                      <!-- <div class="card mt-2"
+                        style="background: #f1f1f1;;border: 1px solid #0878ad;display: flex;flex-direction: row;gap: 10px;padding: 10px 20px; justify-content: space-between;">
+                        <div class="s.no"
+                          style="display: flex; flex-direction: column;align-items: center; justify-content: center;">
+                          <span style="font-weight: 700;">1</span>
+                          <input type="checkbox" name="selctelead" id="id1" style="width: 20px;height: 20px;">
+                        </div>
+                        <div class="lead_summary">
+                          <span class="header sidestyle">Lead Summary</span><br>
+                          <span class="title cardTitle">12 july 2023 <br> Kedarnath </span>
+                        </div>
+                        <div class="nameagent sidestyle">
+                          <span class="header">Name</span><br>
+                          <span class="cardTitle">Vaishanavi</span>
+                        </div>
+                        <div class="lead_status sidestyle">
+                          <span class="header">Lead status</span><br>
+                          <span class="cardTitle">Itinerary Shared</span>
+                        </div>
+                        <div class="source sidestyle">
+                          <span class="header">Source</span><br>
+                          <span class="cardTitle">HelloTravel</span>
+                        </div>
+                        <div class="Budget sidestyle">
+                          <span class="header">Budget</span><br>
+                          <span class="cardTitle">$100</span>
+                        </div>
+                        <div class="lead_type sidestyle">
+                          <span class="header">lead Type</span><br>
+                          <div class="selectleadtype">
+                            <select name="lead type" id="lead" onchange="changeBackgroundColor()"
+                              style="border: none;border-radius: 5px;font-size: 18px;padding: 2px;">
+                              <option value="Hot" style="background-color: #f67575;;color:white">Hot</option>
+                              <option value="Warm" style="background-color: rgb(246, 246, 117);color:white">Warm
+                              </option>
+                              <option value="Cold" style="background-color: rgb(110, 110, 248);color:white">Cold
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="Update_date sidestyle">
+                          <span class="header">Update Date</span><br>
+                          <span class="cardTitle">12-dec-2023</span>
+                        </div>
+                        <div class="Followed_date sidestyle">
+                          <span class="header">Followed Date</span><br>
+                          <span class="cardTitle">12-dec-2023</span>
+                        </div>
+                        <div class="lead_owner sidestyle">
+                          <span class="header">Lead Owner</span><br>
+                          <span class="cardTitle">Abhishek</span>
+                        </div>
+                        <div class="Comment sidestyle">
+                          <span class="header">Last Comment</span><br>
+                          <span class="cardTitle">Itinerary Pending</span>
+                        </div>
+                        <div class="Action sidestyle">
+                          <span class="header">Action</span><br>
+                          <span class="cardTitle">Itinerary Pending</span> -->
+                      <!-- <i class='bx bx-edit'></i>
+                        </div>
+                      </div> -->
+
+
+
+                      <div class="row mt-2">
+                        <div class="btnbox">
+                          <div class="update_status">
+                            <button class="updatebtn">Update Status</button>
+                          </div>
+
+                          <div class="update_status">
+                            <button class="updatebtn">Update Status</button>
+                          </div>
+
+                          <div class="update_status">
+                            <button class="updatebtn">Update Status</button>
+                          </div>
+                        </div>
+
+                        <div class="ms-auto" style="    display: flex;
+                        align-items: center;
+                        justify-content: end;">
+                          <nav aria-label="Page navigation" class="pagination-style-4">
+                            <ul class="pagination mb-0">
+                              <li class="page-item disabled"> <a class="page-link" href="javascript:void(0);">
+                                  Prev </a> </li>
+                              <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                              <li class="page-item"> <a class="page-link text-primary" href="javascript:void(0);">
+                                  next </a> </li>
+                            </ul>
+                          </nav>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion mt-2 closedLeads" id="accordionExample">
+                <div class="accordion-item mb-4" style="border-left: 5px solid #80bcf1;">
+
+                  <h2 class="accordion-header" id="headingOne1">
+                    <div>
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                        <span style="font-weight: 600;">Closed Leads</span>
+                        &nbsp &nbsp
+                        <span style="color: black;"> 3 Leads</span>
+                      </button>
+                    </div>
+                  </h2>
+                  <div id="collapseOne1" class="accordion-collapse collapse " aria-labelledby="headingOne1"
+                    data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                      <div class="card"
+                        style="background: #f1f1f1;;border: 1px solid #0878ad;display: flex;flex-direction: row;gap: 10px;padding: 10px 20px; justify-content: space-between;">
+                        <div class="s.no" style="display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;">
+                          <span style="font-weight: 700;">1</span>
+                          <input type="checkbox" name="selctelead" id="id1" style="width: 20px;height: 20px;">
+                        </div>
+                        <div class="lead_summary">
+                          <span class="header sidestyle">Lead Summary</span><br>
+                          <span class="title cardTitle">12 july 2023 <br> Kedarnath </span>
+                        </div>
+                        <div class="nameagent sidestyle">
+                          <span class="header">Name</span><br>
+                          <span class="cardTitle">Vaishanavi</span>
+                        </div>
+                        <div class="lead_status sidestyle">
+                          <span class="header">Lead status</span><br>
+                          <span class="cardTitle">Itinerary Shared</span>
+                        </div>
+                        <div class="source sidestyle">
+                          <span class="header">Source</span><br>
+                          <span class="cardTitle">HelloTravel</span>
+                        </div>
+                        <div class="Budget sidestyle">
+                          <span class="header">Budget</span><br>
+                          <span class="cardTitle">$100</span>
+                        </div>
+                        <div class="lead_type sidestyle">
+                          <span class="header">lead Type</span><br>
+                          <div class="selectleadtype">
+                            <select name="lead type" id="lead" onchange="changeBackgroundColor()" style="border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            padding: 2px;
+          ">
+                              <option value="Hot" style="background-color: #f67575;;color:white">Hot</option>
+                              <option value="Warm" style="background-color: rgb(246, 246, 117);color:white">Warm
+                              </option>
+                              <option value="Cold" style="background-color: rgb(110, 110, 248);color:white">Cold
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="Update_date sidestyle">
+                          <span class="header">Update Date</span><br>
+                          <span class="cardTitle">12-dec-2023</span>
+                        </div>
+                        <div class="Followed_date sidestyle">
+                          <span class="header">Followed Date</span><br>
+                          <span class="cardTitle">12-dec-2023</span>
+                        </div>
+                        <div class="lead_owner sidestyle">
+                          <span class="header">Lead Owner</span><br>
+                          <span class="cardTitle">Abhishek</span>
+                        </div>
+                        <div class="Comment sidestyle">
+                          <span class="header">Last Comment</span><br>
+                          <span class="cardTitle">Itinerary Pending</span>
+                        </div>
+                        <div class="Action sidestyle">
+                          <span class="header">Action</span><br>
+                          <span class="cardTitle">Itinerary Pending</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- lead summary -->
+            </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- partial -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+    function changeBackgroundColor() {
+      var selectElement = document.getElementById('lead');
+      var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+      var backgroundColor;
+
+      // Set background color based on the selected option
+      switch (selectedValue) {
+        case 'Hot':
+          backgroundColor = 'red';
+          color = "white !important";
+          break;
+        case 'Warm':
+          backgroundColor = 'yellow';
+          color = "white";
+          break;
+        case 'Cold':
+          backgroundColor = 'blue';
+          color = "white";
+          break;
+        default:
+          backgroundColor = ''; // Default background color
+      }
+
+      // Change the background color of the select element
+      selectElement.style.backgroundColor = backgroundColor;
+    }
+  </script>
+  <script>
+    //     const ActiveCheckbox1 = document.getElementById("checkbox1");
+    //     const ClosedCheckbox1 = document.getElementById("checkbox2");
+
+    //     const closedLeads=document.querySelector('.closedLeads')
+    //     const activeLeads=document.querySelector('.activeLeads')
+
+    //     ActiveCheckbox1.addEventListener('click', () => {
+    //       if (ActiveCheckbox1.checked) {
+    //     // Checkbox is checked, hide closedLeads
+    //     closedLeads.style.display = "none";
+    //   } else {
+    //     // Checkbox is unchecked, show closedLeads
+    //     closedLeads.style.display = "block"; // You can use "block" or any other valid display value
+    //   }
+    // })
+    //   ClosedCheckbox1.addEventListener('click', () => {
+    //       if (ClosedCheckbox1.checked) {
+    //     // Checkbox is checked, hide closedLeads
+    //     activeLeads.style.display = "none";
+    //   } else {
+    //     // Checkbox is unchecked, show activeLeads
+    //     activeLeads.style.display = "block"; // You can use "block" or any other valid display value
+    //   }
+    //     });
+
+
+    function handleCheckboxToggle(checkbox, targetElement) {
+      checkbox.addEventListener('click', () => {
+        if (checkbox.checked) {
+          // Checkbox is checked, hide targetElement
+          targetElement.style.display = "none";
+
+        } else {
+          // Checkbox is unchecked, show targetElement
+          targetElement.style.display = "block"; // You can use "block" or any other valid display value
+        }
+      });
+    }
+
+    const ActiveCheckbox1 = document.getElementById("checkbox1");
+    const ClosedCheckbox1 = document.getElementById("checkbox2");
+
+    const closedLeads = document.querySelector('.closedLeads');
+    const activeLeads = document.querySelector('.activeLeads');
+
+    handleCheckboxToggle(ActiveCheckbox1, closedLeads);
+    handleCheckboxToggle(ClosedCheckbox1, activeLeads);
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
